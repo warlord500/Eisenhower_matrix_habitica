@@ -112,8 +112,11 @@ export default function EisenHower(props: Props) {
 
 	return (
 	<div className="full">
-			<div className="sidebar">
-			a test
+			<div class="sidebar">
+				<div>habits</div>
+				<div>rewards</div>
+				<div>include not due dailies</div>
+				<div>make todos urgent</div>
 			</div>
 			<div className="grid">
 				<div className="do">

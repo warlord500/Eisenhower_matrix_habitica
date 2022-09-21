@@ -8,8 +8,11 @@ body {
 	color: white;
 	grid-template-columns: 1fr 1fr;
 	grid-auto-rows: 1fr;
+	width: 85vw;
 	height: 100vh;
-	position: relative;
+	position: ;
+	margin-right: 150px;
+	font-size:14px;
 }
 main {
 	position: relative;
@@ -82,4 +85,20 @@ button {
 	padding: 1rem;
 	font-weight: 700;
 	color: white;
+}
+
+.sidebar { 
+	height: 100%; 
+	width: 15vw; 
+	position: fixed; 
+	left: 85vw; 
+	top: 0; 
+	padding-top: 40px; 
+	background-color: lightblue; 
+}
+
+.sidebar div { 
+ padding: 8px;
+ font-size: 13px;
+ display: block;
 }

@@ -63,7 +63,7 @@ export default function EisenHower(props: Props) {
 			console.log(err);
 		}
 	}
-
+	//likely need to filter reward items here?
 	async function place_task_in_appropriate_square(
 		squares: any,
 		task: any,
@@ -89,7 +89,7 @@ export default function EisenHower(props: Props) {
 				_delete: [],
 			};
 			for (let i = 0; i < data.data.length; i++) {
-				if (data.data[i].completed) continue;
+				if (data.data[i].completed || data.data[i].type == "reward") continue;
 				place_task_in_appropriate_square(squares, data.data[i], tags);
 			}
 			return squares;
@@ -111,30 +111,35 @@ export default function EisenHower(props: Props) {
 	}, []);
 
 	return (
-		<div className="grid">
-			<div className="do">
-				<div className="action do ">
-					<h2>Do</h2>
-				</div>
-				<ul>{_do}</ul>
+	<div className="full">
+			<div className="sidebar">
+			a test
 			</div>
-			<div className="schedule">
-				<div className="action schedule">
-					<h2>Schedule</h2>
+			<div className="grid">
+				<div className="do">
+					<div className="action do ">
+						<h2>Do</h2>
+					</div>
+					<ul>{_do}</ul>
 				</div>
-				<ul>{schedule}</ul>
-			</div>
-			<div className="deligate">
-				<div className="action deligate">
-					<h2>deligate</h2>
+				<div className="schedule">
+					<div className="action schedule">
+						<h2>Schedule</h2>
+					</div>
+					<ul>{schedule}</ul>
 				</div>
-				<ul>{deligate}</ul>
-			</div>
-			<div className="delete">
-				<div className="action delete">
-					<h2>delete</h2>
+				<div className="deligate">
+					<div className="action deligate">
+						<h2>deligate</h2>
+					</div>
+					<ul>{deligate}</ul>
 				</div>
-				<ul>{_delete}</ul>
+				<div className="delete">
+					<div className="action delete">
+						<h2>delete</h2>
+					</div>
+					<ul>{_delete}</ul>
+				</div>
 			</div>
 		</div>
 	);

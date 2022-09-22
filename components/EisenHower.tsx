@@ -112,12 +112,16 @@ export default function EisenHower(props: Props) {
 
 	return (
 	<div className="full">
-			<div class="sidebar">
-				<div>habits</div>
-				<div>rewards</div>
-				<div>include not due dailies</div>
-				<div>make todos urgent</div>
-			</div>
+			<div className="sidebar">
+			<h3>filter</h3>
+				<div><input type="checkbox" id="habits" />habits</div>
+				<div><input type="checkbox" id="rewards" defaultChecked/>rewards</div>
+				<div><input type="checkbox" id="due" />  DUE dailies</div>
+				<div><input type="checkbox" id="urgent" />make due todos urgent!</div>
+				<div><input type="checkbox" id="dallies" /> dallies </div>
+				<div><input type="checkbox" id="todos" /> todos</div>
+				
+ 			</div>
 			<div className="grid">
 				<div className="do">
 					<div className="action do ">
